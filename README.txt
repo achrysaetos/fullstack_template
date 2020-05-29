@@ -1,4 +1,4 @@
-barebones full-stack template
+full-stack template w/ CS50 finance
 using html, css, node, and express
 still needs authentication and session functionalities
 Do not forget to remove your database url from app.js and instead set it as an environment variable!!!
