@@ -1,0 +1,127 @@
+header{
+    margin-left: 100px;
+    margin-right: 10px;
+    width: fit-content;
+    background-color: rgb(48, 48, 48);
+    min-height: 500px;
+    margin-bottom: 20px;
+}
+header li{
+    list-style: none;
+}
+header #brand{
+    color: darkorange;
+    padding-right: 25px;
+    font-size: 24px;
+    padding-top: 20px;
+    padding-bottom: 40px;
+}
+header li a{
+    padding-bottom: 10px;
+    display: block;
+    color: whitesmoke;
+    font-size: 18px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-decoration: none;
+}
+header li a:hover{
+    color: orange;
+    cursor: pointer;
+}
+
+/*-----------------------------------------------------------------------------------------------*/
+
+.dashboard{
+    display: inline-flex;
+}
+.screen{
+    margin-left: 10px;
+    margin-right: 100px;
+}
+.bar{
+    margin-top: -20px;
+    background-color: gray;
+    color: gray;
+    height: 50px;
+    width: 950px;
+}
+.graph{
+    background-color: rgb(216, 216, 216);
+    color: rgb(216, 216, 216);
+    height: 300px;
+    width: 950px;
+    margin-bottom: 20px;
+}
+.stats{
+    display: flex;
+    justify-content: space-between;
+}
+.stats .statsblock{
+    background-color: rgb(216, 216, 216);
+    color: rgb(216, 216, 216);
+    height: 150px;
+    width: 300px;
+    margin-bottom: 20px;
+}
+.lower{
+    display: flex;
+    justify-content: space-between;
+}
+.lower .news{
+    background-color: rgb(216, 216, 216);
+    color: rgb(216, 216, 216);
+    height: 370px;
+    width: 300px;
+    margin-bottom: 20px;
+}
+.lower .chart{
+    background-color: rgb(216, 216, 216);
+    color: rgb(216, 216, 216);
+    height: 150px;
+    width: 625px;
+    margin-bottom: 20px;
+    margin-top: -20px;
+}
+.activity{
+    display: flex;
+    justify-content: space-between;
+}
+.activity .activityblock{
+    background-color: rgb(216, 216, 216);
+    color: rgb(216, 216, 216);
+    height: 200px;
+    width: 300px;
+    margin-bottom: 20px;
+}
+
+/*-----------------------------------------------------------------------------------------------*/
+
+hr{
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-bottom: -20px;
+}
+footer ul{
+    padding-left: 100px;
+    padding-right: 100px;
+}
+footer li{
+    margin-right: 20px;
+    display: inline-block;
+    justify-content: left;
+    flex-wrap: wrap;
+}
+footer li h6{
+    color: darkgray;
+    text-decoration: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: lighter;
+    font-size: 12px;
+}
+footer li a{
+    color: darkgray;
+    text-decoration: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: normal;
+    font-size: 12px;
+}
