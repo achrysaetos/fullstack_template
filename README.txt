@@ -1,6 +1,5 @@
-full-stack template w/ CS50 finance
+full-stack template
 using html, css, node, and express
-still needs authentication and session functionalities
 Do not forget to remove your database url from app.js and instead set it as an environment variable!!!
 
 run "DEBUG=fullstack_template:* npm run devstart"

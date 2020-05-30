@@ -75,7 +75,6 @@ exports.login_post = async (req, res) => {
             });
 
         req.session.userID = user.pword;
-        console.log(req.session.userID);
         await res.redirect("dashboard");
 
     } catch (e) {
