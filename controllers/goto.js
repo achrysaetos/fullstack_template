@@ -34,6 +34,7 @@ exports.login = function (req, res) {
 exports.forgot = function (req, res) {
     res.render("forgot");
 };
+
 exports.dashboard = function (req, res) {
     if (!req.session.userID) {
         res.redirect("login");
@@ -41,6 +42,15 @@ exports.dashboard = function (req, res) {
         res.render("dashboard");
     }
     
+};
+exports.logout = function(req, res) {
+    req.session.destroy(err => {
+        if (err) {
+            res.redirect("index");
+        }
+        res.clearCookie("session");
+        res.redirect("login");
+    });
 };
 
 
@@ -51,16 +61,19 @@ exports.login_post = async (req, res) => {
         let user = await User.findOne({
             uname
         });
+
         if (!user)
             return res.status(400).json({
                 message: "User Does Not Exist"
             });
 
         const isMatch = await bcrypt.compare(pword, user.pword);
+
         if (!isMatch)
             return res.status(400).json({
                 message: "Incorrect Password!"
             });
+
         req.session.userID = user.pword;
         console.log(req.session.userID);
         await res.redirect("dashboard");
@@ -79,6 +92,7 @@ exports.signup_post = async (req, res) => {
         let user = await User.findOne({
             uname
         });
+
         if (user) {
             return res.status(400).json({
                 msg: "User Already Exists"

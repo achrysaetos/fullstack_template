@@ -30,6 +30,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use(bodyParser.json());//to use body-parser
 app.use(session({
+    name: "session",//so we know what cookies to clear
     secret: "secret!",//secret key to sign the session id
     resave: false,
     saveUninitialized: false,

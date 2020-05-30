@@ -17,7 +17,9 @@ router.get("/forgot", goto.forgot);
 
 router.post("/login", goto.signup_post);
 router.post("/dashboard", goto.login_post);
+router.post("/logout", goto.logout);
 
 router.get("/dashboard", goto.dashboard);
+router.get("/logout", goto.logout);
 
 module.exports = router;
