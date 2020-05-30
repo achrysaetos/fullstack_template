@@ -35,7 +35,13 @@ exports.forgot = function (req, res) {
     res.render("forgot");
 };
 exports.dashboard = function (req, res) {
-    res.redirect("login");
+    if (!req.session.userID) {
+        res.redirect("login");
+    } else {
+        res.render("dashboard");
+    }
+
+
 };
 
 
@@ -59,7 +65,7 @@ exports.signup_post = async (req, res) => {
 
         await user.save(function (err) {
             if (err) { return next(err); }
-            res.render("login");
+            res.redirect("login");
         });
 
     } catch (err) {
@@ -84,7 +90,9 @@ exports.login_post = async (req, res) => {
             return res.status(400).json({
                 message: "Incorrect Password!"
             });
-        await res.render("dashboard");
+        req.session.userID = user.pword;
+        console.log(req.session.userID);
+        await res.redirect("dashboard");
 
     } catch (e) {
         console.error(e);
