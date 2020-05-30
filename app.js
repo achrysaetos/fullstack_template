@@ -30,11 +30,12 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use(bodyParser.json());//to use body-parser
 app.use(session({
-    secret: "secret!",
+    secret: "secret!",//secret key to sign the session id
     resave: false,
     saveUninitialized: false,
     cookie: {
-        maxAge: 3000
+        maxAge: 3000,
+        sameSite: true//helps to prevent CSRF attacks
     }
 }));//to use express-session
 

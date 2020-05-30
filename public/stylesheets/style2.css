@@ -3,7 +3,6 @@ header{
     margin-right: 10px;
     width: fit-content;
     background-color: rgb(48, 48, 48);
-    min-height: 500px;
     margin-bottom: 20px;
 }
 header li{
@@ -11,10 +10,10 @@ header li{
 }
 header #brand{
     color: darkorange;
-    padding-right: 25px;
+    padding-right: 30px;
     font-size: 24px;
-    padding-top: 20px;
-    padding-bottom: 40px;
+    padding-top: 10px;
+    padding-bottom: 30px;
 }
 header li a{
     padding-bottom: 10px;
@@ -32,24 +31,90 @@ header li a:hover{
 /*-----------------------------------------------------------------------------------------------*/
 
 .dashboard{
-    display: inline-flex;
+    display: flex;
+    flex-direction: row;
 }
 .screen{
     margin-left: 10px;
     margin-right: 100px;
+    align-items: stretch;
+    width: 100%;
 }
 .bar{
-    margin-top: -20px;
-    background-color: gray;
-    color: gray;
-    height: 50px;
-    width: 950px;
+    background-color: rgb(48, 48, 48);
+    overflow: hidden;
 }
+.bar li{
+    display: inline-block;
+    color: whitesmoke;
+    font-size: 18px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-bottom: 15px;
+    margin-right: 30px;
+}
+
+.logout{
+    border: 0;
+    line-height: 2.5;
+    padding: 0 20px;
+    font-size: 1rem;
+    text-align: center;
+    color: #fff;
+    text-shadow: 1px 1px 1px #000;
+    border-radius: 10px;
+    background-color: darkgray;
+    box-shadow: inset 2px 2px 3px rgba(255, 255, 255, .6),
+                inset -2px -2px 3px rgba(0, 0, 0, .6);
+    outline: 0 none;
+}
+.logout:hover {
+    background-color: gray;
+    cursor: pointer;
+}
+.logout:active {
+    box-shadow: inset -2px -2px 3px rgba(255, 255, 255, .6),
+                inset 2px 2px 3px rgba(0, 0, 0, .6);
+}
+
+/*-----------------------------------------------------------------------------------------------*/
+
+hr{
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-bottom: -20px;
+}
+footer ul{
+    padding-left: 100px;
+    padding-right: 100px;
+}
+footer li{
+    margin-right: 20px;
+    display: inline-block;
+    justify-content: left;
+    flex-wrap: wrap;
+}
+footer li h6{
+    color: darkgray;
+    text-decoration: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: lighter;
+    font-size: 12px;
+}
+footer li a{
+    color: darkgray;
+    text-decoration: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: normal;
+    font-size: 12px;
+}
+
+/*-----------------------------------------------------------------------------------------------*/
+
 .graph{
     background-color: rgb(216, 216, 216);
     color: rgb(216, 216, 216);
     height: 300px;
-    width: 950px;
+
     margin-bottom: 20px;
 }
 .stats{
@@ -92,36 +157,4 @@ header li a:hover{
     height: 200px;
     width: 300px;
     margin-bottom: 20px;
-}
-
-/*-----------------------------------------------------------------------------------------------*/
-
-hr{
-    margin-left: 100px;
-    margin-right: 100px;
-    margin-bottom: -20px;
-}
-footer ul{
-    padding-left: 100px;
-    padding-right: 100px;
-}
-footer li{
-    margin-right: 20px;
-    display: inline-block;
-    justify-content: left;
-    flex-wrap: wrap;
-}
-footer li h6{
-    color: darkgray;
-    text-decoration: none;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-weight: lighter;
-    font-size: 12px;
-}
-footer li a{
-    color: darkgray;
-    text-decoration: none;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-weight: normal;
-    font-size: 12px;
 }

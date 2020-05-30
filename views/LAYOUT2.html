@@ -7,9 +7,28 @@
 </head>
 
 <body>
-    
-    {% block body %}
-    {% endblock %}
+    <div class="dashboard">
+        <header>
+            <ul>
+                <li><a id="brand" href="/">ACHRYSAETOS</a></li>
+                <li><a class="nav" href="/products">Products</a></li>
+                <li><a class="nav" href="/features">Features</a></li>
+                <li><a class="nav" href="/pricing">Pricing</a></li>
+                <li><a class="nav" href="/about">About</a></li>
+                <li><a class="nav" href="/contact_us">Contact Us</a></li>
+            </ul>
+        </header>
+        <div class="screen">
+            <div class="bar">
+                <ul>
+                    <li class="logout" onclick="location.href='/logout'" style="float:right">Log Out</li>
+                </ul>
+                
+            </div>
+            {% block body %}
+            {% endblock %}
+        </div>
+    </div>
 
     <footer>
         <hr>

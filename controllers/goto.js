@@ -36,7 +36,8 @@ exports.forgot = function (req, res) {
 };
 exports.dashboard = function (req, res) {
     if (!req.session.userID) {
-        res.redirect("login");
+        //res.redirect("login");
+        res.render("dashboard");
     } else {
         res.render("dashboard");
     }
@@ -45,34 +46,6 @@ exports.dashboard = function (req, res) {
 };
 
 
-
-exports.signup_post = async (req, res) => {
-    const { uname, fname, lname, pword } = req.body;
-    try {
-        let user = await User.findOne({
-            uname
-        });
-        if (user) {
-            return res.status(400).json({
-                msg: "User Already Exists"
-            });
-        }
-
-        user = new User({ uname, fname, lname, pword });
-
-        const salt = await bcrypt.genSalt(10);
-        user.pword = await bcrypt.hash(pword, salt);
-
-        await user.save(function (err) {
-            if (err) { return next(err); }
-            res.redirect("login");
-        });
-
-    } catch (err) {
-        console.log(err.message);
-        res.status(500).send("Error in Saving");
-    }
-};
 
 exports.login_post = async (req, res) => {
     const { uname, pword } = req.body;
@@ -99,5 +72,33 @@ exports.login_post = async (req, res) => {
         res.status(500).json({
             message: "Server Error"
         });
+    }
+};
+
+exports.signup_post = async (req, res) => {
+    const { uname, fname, lname, pword } = req.body;
+    try {
+        let user = await User.findOne({
+            uname
+        });
+        if (user) {
+            return res.status(400).json({
+                msg: "User Already Exists"
+            });
+        }
+
+        user = new User({ uname, fname, lname, pword });
+
+        const salt = await bcrypt.genSalt(10);
+        user.pword = await bcrypt.hash(pword, salt);
+
+        await user.save(function (err) {
+            if (err) { return next(err); }
+            res.redirect("login");
+        });
+
+    } catch (err) {
+        console.log(err.message);
+        res.status(500).send("Error in Saving");
     }
 };
