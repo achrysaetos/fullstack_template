@@ -13,7 +13,7 @@ header #brand{
     padding-right: 30px;
     font-size: 24px;
     padding-top: 10px;
-    padding-bottom: 30px;
+    padding-bottom: 40px;
 }
 header li a{
     padding-bottom: 10px;
@@ -110,40 +110,38 @@ footer li a{
 
 /*-----------------------------------------------------------------------------------------------*/
 
+h6{text-align: center;}
 .graph{
     background-color: rgb(216, 216, 216);
-    color: rgb(216, 216, 216);
     height: 300px;
-
     margin-bottom: 20px;
 }
 .stats{
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 .stats .statsblock{
     background-color: rgb(216, 216, 216);
-    color: rgb(216, 216, 216);
     height: 150px;
-    width: 300px;
+    width: 32%;
     margin-bottom: 20px;
 }
 .lower{
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap-reverse;
 }
 .lower .news{
     background-color: rgb(216, 216, 216);
-    color: rgb(216, 216, 216);
     height: 370px;
-    width: 300px;
+    width: 32%;
     margin-bottom: 20px;
 }
 .lower .chart{
     background-color: rgb(216, 216, 216);
-    color: rgb(216, 216, 216);
     height: 150px;
-    width: 625px;
+    width: 620px;
     margin-bottom: 20px;
     margin-top: -20px;
 }
@@ -153,8 +151,17 @@ footer li a{
 }
 .activity .activityblock{
     background-color: rgb(216, 216, 216);
-    color: rgb(216, 216, 216);
     height: 200px;
-    width: 300px;
+    width: 48%;
     margin-bottom: 20px;
+}
+
+@media only screen and (max-width: 1100px) and (min-width: 825px) {
+    header{
+        display: none;
+    }
+    .screen{
+        margin-left: 100px;
+        margin-right: 100px;
+    }
 }

@@ -36,13 +36,11 @@ exports.forgot = function (req, res) {
 };
 exports.dashboard = function (req, res) {
     if (!req.session.userID) {
-        //res.redirect("login");
-        res.render("dashboard");
+        res.redirect("login");
     } else {
         res.render("dashboard");
     }
-
-
+    
 };
 
 
