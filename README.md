@@ -2,9 +2,9 @@
 
 Full-stack boilerplate using html, css, node, and express.
 
-*Don't forget to set your database url in app.js or as an environment variable.*
+*Don't forget to set your database url in app.js or as an environment variable!*
 
-**To start:** run `DEBUG=fullstack_template:* npm run devstart` and go to http://localhost:3000
+**To start:** run `DEBUG=fullstack_template:* npm run devstart` and go to http://localhost:3000.
 
 
 **TO DO:**
